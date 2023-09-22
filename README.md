@@ -13,7 +13,22 @@ if (!("remotes" %in% installed.packages())) {
 remotes::install_github("fhdsl/githubr")
 ```
 
+## Set up credentials
+
+First, set up your GitHub credentials using `usethis::gitcreds_set()`. 
+```
+install.packages(c("usethis", "gitcreds"))
+
+# Get a token
+usethis::create_github_token()
+
+# Give this token to gitcreds_set()
+gitcreds::gitcreds_set()
+```
+
 ## What you can do (so far)
+
+Now you can rock and roll with `githubr`. 
 
 Return a TRUE/FALSE if a repo exists:
 ```
