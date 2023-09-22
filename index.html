@@ -80,8 +80,21 @@
 <span><span class="fu">remotes</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"fhdsl/githubr"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
+<h2 id="set-up-credentials">Set up credentials<a class="anchor" aria-label="anchor" href="#set-up-credentials"></a>
+</h2>
+<p>First, set up your GitHub credentials using <code>usethis::gitcreds_set()</code>.</p>
+<pre><code><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"usethis"</span>, <span class="st">"gitcreds"</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Get a token</span></span>
+<span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">create_github_token</span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Give this token to gitcreds_set()</span></span>
+<span><span class="fu">gitcreds</span><span class="fu">::</span><span class="fu"><a href="https://gitcreds.r-lib.org/reference/gitcreds_get.html" class="external-link">gitcreds_set</a></span><span class="op">(</span><span class="op">)</span></span></code></pre>
+</div>
+<div class="section level2">
 <h2 id="what-you-can-do-so-far">What you can do (so far)<a class="anchor" aria-label="anchor" href="#what-you-can-do-so-far"></a>
 </h2>
+<p>Now you can rock and roll with <code>githubr</code>.</p>
 <p>Return a TRUE/FALSE if a repo exists:</p>
 <pre><code><span><span class="va">exists</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/check_git_repo.html">check_git_repo</a></span><span class="op">(</span><span class="st">"jhudsl/OTTR_Template"</span><span class="op">)</span></span>
 <span></span>
