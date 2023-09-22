@@ -1,2 +1,15 @@
+.github
+.httr-oauth
+.secrets/
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^\.httr-oauth$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^man/default_creds_path.Rd$
+^man/key_encrypt_creds_path.Rd$
+^man/encrypt_creds_path.Rd$
+^\.github$
+^CRAN-SUBMISSION$
+^cran-comments\.md$
