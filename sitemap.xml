@@ -13,6 +13,12 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/news/index.html</loc>
+  </url>
+  <url>
+    <loc>/reference/accept_all_invites.html</loc>
+  </url>
+  <url>
     <loc>/reference/check_git_repo.html</loc>
   </url>
   <url>
@@ -20,6 +26,9 @@
   </url>
   <url>
     <loc>/reference/get_issues.html</loc>
+  </url>
+  <url>
+    <loc>/reference/get_repos.html</loc>
   </url>
   <url>
     <loc>/reference/index.html</loc>
