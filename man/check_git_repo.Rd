@@ -34,9 +34,10 @@ output from git ls-remote if return_repo = TRUE.
 Given a repository name, check with git ls-remote whether the repository exists and return a TRUE/FALSE
 }
 \examples{
+ \dontrun{
 
 exists <- check_git_repo("jhudsl/OTTR_Template")
 
 if (exists) message("Yup, this repo exists")
-
+}
 }

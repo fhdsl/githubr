@@ -14,10 +14,11 @@
 #'
 #' @export
 #'
-#' @examples
+#' @examples  \dontrun{
 #'
 #' issues_df <- get_issues("jhudsl/OTTR_Template")
 #'
+#' }
 get_issues <- function(repo_name,
                        how_many = "all",
                        git_pat = NULL,

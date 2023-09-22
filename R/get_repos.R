@@ -14,10 +14,10 @@
 #'
 #' @export
 #'
-#' @examples
+#' @examples  \dontrun{
 #'
 #' repos_df <- get_repos("fhdsl")
-#'
+#' }
 get_repos <- function(owner,
                       how_many = "all",
                       git_pat = NULL,

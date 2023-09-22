@@ -23,7 +23,9 @@ A data frame that contains information about the issues from the given repositor
 Given a repository name, get a list of issues.
 }
 \examples{
+ \dontrun{
 
 issues_df <- get_issues("jhudsl/OTTR_Template")
 
+}
 }
