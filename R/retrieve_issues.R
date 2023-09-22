@@ -8,13 +8,16 @@
 #' repository being checked is a private repository.
 #' @param verbose TRUE/FALSE do you want more progress messages?
 #'
-#' @return A List of issues from the given repository
+#' @return A data frame that contains information about the issues from the given repository
+#' @importFrom gh gh
+#' @importFrom dplyr bind_rows
 #'
 #' @export
 #'
 #' @examples
 #'
 #' get_issues("jhudsl/OTTR_Template")
+#'
 get_issues <- function(repo_name,
                        how_many = "all",
                        git_pat = NULL,
@@ -62,11 +65,9 @@ get_issues <- function(repo_name,
           }
         }
       }
-      # titles_only <- vapply(my_issues, "[[", "", "title")
     } else {
       stop("That repo doesn't exist or you don't have the credentials to see it.")
     }
   }
-
   return(issues_df)
 }

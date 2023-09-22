@@ -3,18 +3,18 @@ Title: API Wrapper for GitHub
 Version: 0.9.1
 Authors@R:
     person("Candace", "Savonen", , "csavonen@fredhutch.org", role = c("cre", "aut"))
-Description: This is a GitHub API wrapper for R
+Description: This is a GitHub API wrapper for R. It uses gh but has things wrapped up for convenient use cases.
 License: GPL-3
 URL: https://github.com/fhdsl/githubr
 BugReports: https://github.com/fhdsl/githubr/issues
 Imports:
-    usethis,
     gitcreds,
-    httr,
-    jsonlite,
+    dplyr, 
+    gh,
 Encoding: UTF-8
 RoxygenNote: 7.2.3
 Suggests:
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0), 
+    knitr,
 Config/testthat/edition: 3
 VignetteBuilder: knitr
