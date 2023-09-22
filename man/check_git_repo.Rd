@@ -35,5 +35,8 @@ Given a repository name, check with git ls-remote whether the repository exists 
 }
 \examples{
 
-check_git_repo("jhudsl/OTTR_Template")
+exists <- check_git_repo("jhudsl/OTTR_Template")
+
+if (exists) message("Yup, this repo exists")
+
 }
