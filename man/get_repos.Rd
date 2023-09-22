@@ -23,7 +23,8 @@ A data frame that contains information about the issues from the given repositor
 Given a username or organization, retrieve all the repos
 }
 \examples{
+ \dontrun{
 
 repos_df <- get_repos("fhdsl")
-
+}
 }

@@ -16,12 +16,12 @@
 #'
 #' @export
 #'
-#' @examples
+#' @examples  \dontrun{
 #'
 #' exists <- check_git_repo("jhudsl/OTTR_Template")
 #'
 #' if (exists) message("Yup, this repo exists")
-#'
+#' }
 check_git_repo <- function(repo_name,
                            git_pat = NULL,
                            silent = TRUE,
