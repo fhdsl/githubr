@@ -2,7 +2,7 @@
 #'
 #' Given a username or organization, retrieve all the repos
 #'
-#' @param owner the name of the organization or user to retrieve a list of repos from. Eg. fhdsl
+#' @param owner the name of the organization or user to retrieve a list of repos from. E.g. fhdsl
 #' @param how_many put the number of how many you would like returned. If all, put "all". By default will return all issues.
 #' @param git_pat A personal access token from GitHub. Only necessary if the
 #' repository being checked is a private repository.
@@ -26,7 +26,8 @@
 #' # Now you can retrieve the repositories
 #' repos_df <- get_repos("fhdsl")
 #'
-#' # Alternatively, you can supply the GitHub PAT directly to the function to avoid doing the steps above.
+#' # Alternatively, you can supply the GitHub PAT directly
+#' # to the function to avoid doing the steps above.
 #' repos_df <- get_repos("fhdsl", git_pat = "gh_somepersonalaccesstokenhere")
 #' }
 get_repos <- function(owner,

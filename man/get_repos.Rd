@@ -7,7 +7,7 @@
 get_repos(owner, how_many = "all", git_pat = NULL, verbose = TRUE)
 }
 \arguments{
-\item{owner}{the name of the organization or user to retrieve a list of repos from. Eg. fhdsl}
+\item{owner}{the name of the organization or user to retrieve a list of repos from. E.g. fhdsl}
 
 \item{how_many}{put the number of how many you would like returned. If all, put "all". By default will return all issues.}
 
@@ -25,6 +25,18 @@ Given a username or organization, retrieve all the repos
 \examples{
  \dontrun{
 
+# First, set up your GitHub credentials using `usethis::gitcreds_set()`.
+# Get a GitHub personal access token (PAT)
+usethis::create_github_token()
+
+# Give this token to `gitcreds_set()`
+gitcreds::gitcreds_set()
+
+# Now you can retrieve the repositories
 repos_df <- get_repos("fhdsl")
+
+# Alternatively, you can supply the GitHub PAT directly
+# to the function to avoid doing the steps above.
+repos_df <- get_repos("fhdsl", git_pat = "gh_somepersonalaccesstokenhere")
 }
 }

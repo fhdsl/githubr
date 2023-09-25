@@ -25,8 +25,9 @@
 #'
 #' # Now you can retrieve issues
 #' issues_df <- get_issues("jhudsl/OTTR_Template")
-#'
-#' # Alternatively, you can supply the GitHub PAT directly to the function to avoid doing the steps above.
+#
+#' # Alternatively, you can supply the GitHub PAT directly
+#' # to the function to avoid doing the steps above.
 #' issues_df <- get_issues("jhudsl/OTTR_Template", git_pat = "gh_somepersonalaccesstokenhere")
 #' }
 get_issues <- function(repo_name,
