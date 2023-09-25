@@ -25,7 +25,17 @@ Given a repository name, get a list of issues.
 \examples{
  \dontrun{
 
-issues_df <- get_issues("jhudsl/OTTR_Template")
+# First, set up your GitHub credentials using `usethis::gitcreds_set()`.
+# Get a GitHub personal access token (PAT)
+usethis::create_github_token()
 
+# Give this token to `gitcreds_set()`
+gitcreds::gitcreds_set()
+
+# Now you can retrieve issues
+issues_df <- get_issues("jhudsl/OTTR_Template")
+# Alternatively, you can supply the GitHub PAT directly
+# to the function to avoid doing the steps above.
+issues_df <- get_issues("jhudsl/OTTR_Template", git_pat = "gh_somepersonalaccesstokenhere")
 }
 }
