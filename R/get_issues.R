@@ -20,7 +20,7 @@
 #' # Get a GitHub personal access token (PAT)
 #' usethis::create_github_token()
 #'
-#' # Give this token to gitcreds_set()
+#' # Give this token to `gitcreds_set()`
 #' gitcreds::gitcreds_set()
 #'
 #' # Now you can retrieve issues
