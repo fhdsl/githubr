@@ -3,7 +3,7 @@ Title: API Wrapper for GitHub
 Version: 0.9.1
 Authors@R:
     person("Candace", "Savonen", , "csavonen@fredhutch.org", role = c("cre", "aut"))
-Description: This is a GitHub API wrapper for R. It uses gh but has things wrapped up for convenient use cases.
+Description: This is a GitHub API wrapper for R. <https://docs.github.com/en/rest> It uses the 'gh' package but has things wrapped up for convenient use cases.
 License: GPL-3
 URL: https://github.com/fhdsl/githubr
 BugReports: https://github.com/fhdsl/githubr/issues

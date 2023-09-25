@@ -16,7 +16,18 @@
 #'
 #' @examples  \dontrun{
 #'
+#' # First, set up your GitHub credentials using `usethis::gitcreds_set()`.
+#' # Get a GitHub personal access token (PAT)
+#' usethis::create_github_token()
+#'
+#' # Give this token to gitcreds_set()
+#' gitcreds::gitcreds_set()
+#'
+#' # Now you can retrieve the repositories
 #' repos_df <- get_repos("fhdsl")
+#'
+#' # Alternatively, you can supply the GitHub PAT directly to the function to avoid doing the steps above.
+#' repos_df <- get_repos("fhdsl", git_pat = "gh_somepersonalaccesstokenhere")
 #' }
 get_repos <- function(owner,
                       how_many = "all",
