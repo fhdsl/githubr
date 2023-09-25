@@ -78,6 +78,14 @@ If none is supplied, then this will attempt to grab from a git pat set in the en
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># First, set up your GitHub credentials using `usethis::gitcreds_set()`.</span></span></span>
+<span class="r-in"><span><span class="co"># Get a GitHub personal access token (PAT)</span></span></span>
+<span class="r-in"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">create_github_token</span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Give this token to `gitcreds_set()`</span></span></span>
+<span class="r-in"><span><span class="fu">gitcreds</span><span class="fu">::</span><span class="fu"><a href="https://gitcreds.r-lib.org/reference/gitcreds_get.html" class="external-link">gitcreds_set</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># All invites that have been sent to the PAT you have provided you will be accepted</span></span></span>
 <span class="r-in"><span><span class="fu">accept_all_invites</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>

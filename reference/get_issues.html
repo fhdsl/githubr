@@ -86,8 +86,18 @@ repository being checked is a private repository.</p></dd>
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span> <span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span><span class="va">issues_df</span> <span class="op">&lt;-</span> <span class="fu">get_issues</span><span class="op">(</span><span class="st">"jhudsl/OTTR_Template"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># First, set up your GitHub credentials using `usethis::gitcreds_set()`.</span></span></span>
+<span class="r-in"><span><span class="co"># Get a GitHub personal access token (PAT)</span></span></span>
+<span class="r-in"><span><span class="fu">usethis</span><span class="fu">::</span><span class="fu">create_github_token</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Give this token to `gitcreds_set()`</span></span></span>
+<span class="r-in"><span><span class="fu">gitcreds</span><span class="fu">::</span><span class="fu"><a href="https://gitcreds.r-lib.org/reference/gitcreds_get.html" class="external-link">gitcreds_set</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Now you can retrieve issues</span></span></span>
+<span class="r-in"><span><span class="va">issues_df</span> <span class="op">&lt;-</span> <span class="fu">get_issues</span><span class="op">(</span><span class="st">"jhudsl/OTTR_Template"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="co"># Alternatively, you can supply the GitHub PAT directly</span></span></span>
+<span class="r-in"><span><span class="co"># to the function to avoid doing the steps above.</span></span></span>
+<span class="r-in"><span><span class="va">issues_df</span> <span class="op">&lt;-</span> <span class="fu">get_issues</span><span class="op">(</span><span class="st">"jhudsl/OTTR_Template"</span>, git_pat <span class="op">=</span> <span class="st">"gh_somepersonalaccesstokenhere"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
