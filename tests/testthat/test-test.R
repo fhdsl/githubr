@@ -1,17 +1,25 @@
 test_that("githubr", {
 
-  auth_arg <- try(gitcreds::gitcreds_get(), silent = TRUE)
+  git_pat <- try(gitcreds::gitcreds_get()$password, silent = TRUE)
 
   # Only is tested if we have credentials available
-  if (class(auth_arg) != "try-error") {
+  if (class(git_pat) != "try-error") {
 
     # Test the issue getter
     issues_df <- get_issues("jhudsl/OTTR_Template")
-    expect_true(is.data.frame(issues_df))
+    testthat::expect_true(is.data.frame(issues_df))
+
+    # Test the issue getter with a PAT
+    issues_df <- get_issues("jhudsl/OTTR_Template", git_pat = git_pat)
+    testthat::expect_true(is.data.frame(issues_df))
 
     # Test the repo getter
     repos_df <- get_repos("fhdsl")
-    expect_true(is.data.frame(repos_df))
+    testthat::expect_true(is.data.frame(repos_df))
+
+    # Test the repo getter
+    repos_df <- get_repos("fhdsl", git_pat = git_pat)
+    testthat::expect_true(is.data.frame(repos_df))
   }
 
 })
