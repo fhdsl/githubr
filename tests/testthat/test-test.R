@@ -1,9 +1,9 @@
 test_that("githubr", {
 
-  git_pat <- try(gitcreds::gitcreds_get()$password, silent = TRUE)
+  git_pat <- try(gitcreds::gitcreds_get()$password, silent = TRUE)[1]
 
   # Only is tested if we have credentials available
-  if (class(git_pat) != "try-error") {
+  if (class(git_pat) == "character") {
 
     # Test the issue getter
     issues_df <- get_issues("jhudsl/OTTR_Template")
