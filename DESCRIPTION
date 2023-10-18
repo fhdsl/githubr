@@ -1,5 +1,5 @@
 Package: githubr
-Title: API Wrapper for GitHub
+Title: Easier to use API Wrapper for 'GitHub'
 Version: 0.9.1
 Authors@R:
     person("Candace", "Savonen", , "csavonen@fredhutch.org", role = c("cre", "aut"))
