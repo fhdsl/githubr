@@ -68,12 +68,12 @@ get_issues <- function(repo_name,
 
         while(!grepl("No next page", next_issues[[1]])[1]) {
 
-          next_issues <- try(gh::gh_next(next_issues, .token = git_pat), silent = TRUE)
+          next_issues <- try(gh::gh_next(next_issues), silent = TRUE)
 
           if (!grepl("No next page", next_issues[[1]])[1]) {
-          next_issues_df <- suppressWarnings(as.data.frame(t(do.call(cbind, next_issues, .token = git_pat))))
+            next_issues_df <- suppressWarnings(as.data.frame(t(do.call(cbind, next_issues))))
 
-          issues_df <- dplyr::bind_rows(issues_df, next_issues_df)
+            issues_df <- dplyr::bind_rows(issues_df, next_issues_df)
           }
         }
       }
