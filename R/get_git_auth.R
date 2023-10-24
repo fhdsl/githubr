@@ -39,16 +39,17 @@ get_git_auth <- function(git_pat = NULL, git_username = "PersonalAccessToken", q
     # Set to Renviron file temporarily
     Sys.setenv(GITHUB_PAT = git_pat)
 
-    # Put it in gitcreds
     auth_arg <- gitcreds::gitcreds_get()
 
-    # Delete from Renviron file
-    Sys.unsetenv("GITHUB_PAT")
-
-    # Set up rest of token
     auth_arg$protocol <- "https"
     auth_arg$host <- "github.com"
-    auth_arg$username <- git_username
+    auth_arg$username <- "PersonalAccessToken"
+    auth_arg$password <- git_pat
+
+    # Put it in gitcreds
+    gitcreds::gitcreds_approve(list(url = "https://github.com", username = "PersonalAccessToken", password = git_pat))
+
+    Sys.unsetenv("GITHUB_PAT")
   }
 
   # Check if we have authentication
